@@ -1,0 +1,15 @@
+# Other files to ignore
+.project
+.settings
+.classpath
+.idea
+*.iml
+*.ipr
+*.iws
+/build
+*/build
+build/*
+out/
+*/bin/
+.DS_Store
+target/
