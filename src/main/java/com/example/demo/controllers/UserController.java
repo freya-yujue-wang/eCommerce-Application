@@ -44,6 +44,7 @@ public class UserController {
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
+		log.info("Username used to find user is {} ", username);
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
 
@@ -52,7 +53,7 @@ public class UserController {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 
-		log.info("User name set with {}:", createUserRequest.getUsername());
+		log.info("User name set with {}.", createUserRequest.getUsername());
 
 		Cart cart = new Cart();
 		cartRepository.save(cart);
