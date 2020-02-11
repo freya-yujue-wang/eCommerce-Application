@@ -44,6 +44,7 @@ public class OrderController {
 			log.error("Order request failure: user {} not found", username);
 			return ResponseEntity.notFound().build();
 		}
+		log.info("find user {}  orders", username);
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }
