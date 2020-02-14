@@ -19,11 +19,14 @@ import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
 
 	private static final Logger log = (Logger) LoggerFactory.getLogger(UserController.class);
+
+
 
 	@Autowired
 	private UserRepository userRepository;

@@ -13,3 +13,5 @@ out/
 */bin/
 .DS_Store
 target/
+*.log
+logs/
